@@ -61,3 +61,6 @@ HTTP Method: GET
     		"email": "walter.bates@email.com"
     	}
     ]
+
+
+![JWT](https://github.com/chriscrm/movierentalapp/blob/main/jwtdiagram.jpeg)
