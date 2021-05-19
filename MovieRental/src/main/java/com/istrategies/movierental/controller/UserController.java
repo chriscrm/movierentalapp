@@ -18,8 +18,12 @@ import com.istrategies.movierental.request.UserDetailModel;
 import com.istrategies.movierental.response.UserRest;
 import com.istrategies.movierental.service.UserService;
 
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+
 @RestController
-@RequestMapping("users")
+@RequestMapping("/users")
+@Api(tags = "Users")
 public class UserController {
 	
 	@Autowired
@@ -53,6 +57,7 @@ public class UserController {
 	}
 
 	
+	@ApiOperation(value = "This method is used to get the clients.")
 	@GetMapping
 	public List<UserRest> getUsers(@RequestParam(value = "page", defaultValue = "0") int page,
 			@RequestParam(value = "limit", defaultValue = "25") int limit){
