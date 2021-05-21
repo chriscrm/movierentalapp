@@ -36,5 +36,5 @@ public class MovieCatalogEntity {
 	@Column(nullable = false)
 	private double salePrice;
 	
-	private boolean availability = true;
+	private boolean availability;
 }
