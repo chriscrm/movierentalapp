@@ -64,3 +64,10 @@ HTTP Method: GET
 
 
 ![JWT](https://github.com/chriscrm/movierentalapp/blob/main/jwtdiagram.jpeg)
+
+
+**SWAGGER api-docs**
+http://localhost:8080/webapp/api/v2/api-docs
+
+**SWAGGER UI**
+http://localhost:8080/webapp/api/swagger-ui/
