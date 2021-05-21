@@ -1,12 +1,16 @@
 package com.istrategies.movierental.dto;
 
+import java.io.Serializable;
+
 import lombok.*;
 
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class MovieCatalogDTO {
+public class MovieCatalogDTO implements Serializable {
+
+	private static final long serialVersionUID = 1L;
 	
 	private long id;
 	private String title;
@@ -14,6 +18,6 @@ public class MovieCatalogDTO {
 	private int movieStock;
 	private double rentalPrice;
 	private double salePrice;
-	private boolean availability;
+	private boolean availability = true;
 
 }
