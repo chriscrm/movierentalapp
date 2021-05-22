@@ -19,6 +19,8 @@ import com.istrategies.movierental.response.UserRest;
 import com.istrategies.movierental.service.UserService;
 
 import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiImplicitParam;
+import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
 
 @RestController
@@ -57,6 +59,9 @@ public class UserController {
 	}
 
 	
+	@ApiImplicitParams({
+		@ApiImplicitParam(name = "authorization", value = "${userController.authorizationHeader.description}", paramType = "header")
+	})
 	@ApiOperation(value = "This method is used to get the clients.")
 	@GetMapping
 	public List<UserRest> getUsers(@RequestParam(value = "page", defaultValue = "0") int page,
